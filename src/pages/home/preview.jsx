@@ -13,25 +13,27 @@ function Preview({ tempoJunto, imagem, mensagem, video }) {
     return () => clearInterval(intervalo);
   }, [imagem]);
 
-  const imgUrl =
-    imagem && imagem.length > 0
-      ? imagem[index]
-      : "https://via.placeholder.com/300x400?text=Imagem+n%C3%A3o+encontrada";
+ const FALLBACK_IMG = "https://placehold.co/300x400?text=Imagem+não+encontrada";
 
+const validImages =
+  Array.isArray(imagem) && imagem.length > 0
+    ? imagem.filter((url) => url && typeof url === "string" && url.startsWith("http"))
+    : [];
+
+const imgUrl = validImages.length > 0 ? validImages[index % validImages.length] : FALLBACK_IMG;
   return (
     <div className="preview">
       <p>Josias 💘 Aby</p>
       {imagem && (
         <div className="image-container">
           <img
-            src={imgUrl}
-            alt="Prévia"
-            onError={(e) => {
-              console.error("Erro ao carregar imagem:", imagem);
-              e.target.src =
-                "https://via.placeholder.com/300x400?text=Imagem+não+encontrada";
-            }}
-          />
+  src={imgUrl}
+  alt="Prévia"
+  onError={(e) => {
+    console.warn("Erro ao carregar imagem:", e.target.src);
+    if (e.target.src !== FALLBACK_IMG) e.target.src = FALLBACK_IMG;
+  }}
+/>
         </div>
       )}
 
