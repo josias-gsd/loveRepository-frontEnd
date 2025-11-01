@@ -1,0 +1,114 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+form {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+p {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid #b41766;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="file"] {
+  border: none;
+  padding: 0.5rem 0;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #ff1493;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Estilização específica para o preview */
+div p:last-child {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #ff69b4;
+}
+.espelhar {
+  width: 100%;
+}
+.imagem {
+  max-width: 100%; /* Faz a imagem ocupar no máximo a largura do container */
+  height: auto; /* Mantém a proporção original da imagem */
+  display: block; /* Remove espaços indesejados abaixo da imagem */
+  margin: 20px auto; /* Centraliza e dá um espaço em cima e embaixo */
+  border-radius: 10px; /* Arredonda os cantos da imagem */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra */
+  max-height: 300px; /* Evita que a imagem fique muito alta */
+  object-fit: cover; /* Corta o excesso da imagem se necessário */
+}
+
+.home-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Responsivo — empilha no celular */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Ajuste para melhor visualização em telas menores */
+@media (max-width: 600px) {
+  form {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}

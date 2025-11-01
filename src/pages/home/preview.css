@@ -1,0 +1,153 @@
+.preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  /* Fundo em gradiente: preto -> roxo escuro -> rosa suave */
+  background: linear-gradient(
+    180deg,
+    #000000 0%,
+    #1a002a 60%,
+    rgba(255, 105, 180, 0.06) 100%
+  );
+  width: 100%;
+  max-width: 500px;
+  height: 600px; /* Altura fixa para o preview */
+  overflow-y: auto; /* Adiciona scroll vertical quando necessário */
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  color: #fff; /* texto padrão claro sobre o fundo escuro */
+  margin-left: 3rem;
+}
+
+.preview::-webkit-scrollbar {
+  width: 8px;
+}
+
+.preview::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.preview::-webkit-scrollbar-thumb {
+  background: #ff69b4;
+  border-radius: 4px;
+}
+
+.preview::-webkit-scrollbar-thumb:hover {
+  background: #ff1493;
+}
+
+.preview .image-container {
+  width: 300px; /* Largura fixa */
+  height: 400px; /* Altura fixa */
+  position: relative;
+  border-radius: 10px;
+  background-color: rgba(230, 14, 14, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Garante que a imagem não vaze */
+  flex-shrink: 0; /* Impede que o container encolha */
+}
+
+.preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cobre todo o espaço disponível */
+  object-position: center; /* Centraliza a imagem */
+  border-radius: 10px;
+  display: block;
+}
+
+.preview iframe {
+  max-width: 90%;
+  width: 560px; /* Largura padrão do iframe */
+  height: 315px; /* Altura padrão do iframe */
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.preview p {
+  width: 90%;
+  word-wrap: break-word;
+  margin: 5px 0;
+  background: transparent; /* garantir que p não tenha fundo */
+}
+
+/* Estilo para o título "Como vai ficar" */
+.preview p:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff69b4;
+  margin-bottom: 20px;
+}
+
+/* Estilo para o "Juntos" */
+.preview p:nth-child(3) {
+  font-size: 1.2rem;
+  color: #ff69b4;
+  font-weight: bold;
+}
+
+/* Estilo para o contador */
+.preview p:nth-child(4) {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #fff;
+}
+
+/* Linha divisória */
+.preview p:nth-child(5) {
+  color: #ff69b4;
+  margin: 10px 0;
+}
+
+/* Mensagem */
+.preview p:nth-child(6) {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fff;
+  padding: 10px;
+  background: transparent; /* remover background conforme pedido */
+  border-radius: 8px;
+  width: 90%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .preview {
+    height: 500px;
+  }
+
+  .preview iframe {
+    width: 90%;
+    height: 240px;
+  }
+
+  .preview .image-container {
+    width: 225px; /* Proporção mantida 3:4 */
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .preview {
+    height: 450px;
+  }
+
+  .preview iframe {
+    height: 200px;
+  }
+
+  .preview .image-container {
+    width: 180px; /* Proporção mantida 3:4 */
+    height: 240px;
+  }
+
+  .preview p:first-child {
+    font-size: 1.3rem;
+  }
+}
