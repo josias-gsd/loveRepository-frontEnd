@@ -32,9 +32,12 @@ export default function Tela() {
 
   useEffect(() => {
     const fetchData = async () => {
+      const start = performance.now();
       try {
         const res = await api.get("/ver");
-
+        console.log(
+          `⏱️ Tempo total front (GET /ver): ${performance.now() - start} ms`
+        );
         if (res.data && res.data.length > 0) {
           // procura o primeiro registro (mais recente) com imagens
           const ultimoComFotos = res.data.find(

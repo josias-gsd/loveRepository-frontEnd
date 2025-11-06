@@ -177,7 +177,7 @@ function Home() {
 
       <Preview
         tempoJunto={tempoJunto}
-        imagem={selectImg[imagemActual]}
+        imagem={selectImg}
         mensagem={mensagem}
         video={videoId}
       />
