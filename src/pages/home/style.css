@@ -60,9 +60,8 @@ textarea {
 /* Estilização específica para o preview */
 div p:last-child {
   text-align: center;
-  font-weight: bold;
+
   margin-top: 1rem;
-  color: #ff69b4;
 }
 .espelhar {
   width: 100%;

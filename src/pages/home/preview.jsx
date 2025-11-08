@@ -31,7 +31,6 @@ function Preview({ tempoJunto, imagem, mensagem, video }) {
       : FALLBACK_IMG;
   return (
     <div className="preview">
-      <p>Josias 💘 Aby</p>
       {imagem && (
         <div className="image-container">
           <img
@@ -42,6 +41,14 @@ function Preview({ tempoJunto, imagem, mensagem, video }) {
               if (e.target.src !== FALLBACK_IMG) e.target.src = FALLBACK_IMG;
             }}
           />
+          <div className="hearts-container">
+            {/* Aqui os corações serão animados pelo CSS */}
+            <span className="heart">❤️</span>
+            <span className="heart">❤️</span>
+            <span className="heart">❤️</span>
+            <span className="heart">❤️</span>
+            <span className="heart">❤️</span>
+          </div>
         </div>
       )}
 
@@ -50,9 +57,9 @@ function Preview({ tempoJunto, imagem, mensagem, video }) {
         {tempoJunto.anos} anos, {tempoJunto.meses} meses, {tempoJunto.dias} dias
         <br />
         {tempoJunto.horas} horas, {tempoJunto.minutos} minutos,{" "}
-        {tempoJunto.segundos} segundos
+        {tempoJunto.segundos} segundos <br />❤
       </p>
-      <p>----------------</p>
+      <div className="linha-divisoria"></div>
 
       <p>{mensagem}</p>
 
