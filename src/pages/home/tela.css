@@ -4,11 +4,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000; /* fundo preto */
-  background-image: radial-gradient(2px 2px #fff, transparent 2px),
-    radial-gradient(2px 2px #fff, transparent 2px);
-  background-position: 0 0, 25px 25px; /* offset dos pontos */
-  background-size: 50px 50px;
+  background: #000; /* fundo preto */
+  background-image: radial-gradient(
+      2px 2px at 20px 30px,
+      rgba(255, 255, 255, 0.8),
+      transparent
+    ),
+    radial-gradient(
+      1.5px 1.5px at 80px 120px,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    ),
+    radial-gradient(
+      1.5px 1.5px at 150px 200px,
+      rgba(255, 182, 193, 0.6),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 250px 80px,
+      rgba(255, 182, 193, 0.5),
+      transparent
+    ),
+    radial-gradient(
+      1px 1px at 400px 300px,
+      rgba(255, 255, 255, 0.7),
+      transparent
+    );
+  background-repeat: repeat;
+  background-size: 500px 500px;
+  animation: starsMove 60s linear infinite; /* estrelas se movem lentamente */
+
   padding: 20px;
 }
 
