@@ -208,57 +208,41 @@
   width: 90%;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .preview {
-    height: 500px;
-  }
-
-  .preview iframe {
-    width: 90%;
-    height: 240px;
-  }
-
-  .preview .image-container {
-    width: 225px; /* Proporção mantida 3:4 */
-    height: 300px;
-  }
-}
-
 @media (max-width: 480px) {
   .preview {
     height: auto;
-    min-height: 450px;
+    min-height: 500px; /* aumenta altura mínima */
     margin: 10px;
-    padding: 15px;
-  }
-
-  .preview iframe {
-    height: 200px;
-  }
-
-  .preview .image-container {
-    width: 280px; /* Largura ajustada para celular */
-    height: 380px; /* Altura ajustada para celular */
+    padding: 20px; /* mais padding */
   }
 
   .preview p:first-child {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
+    font-size: 1.6rem; /* maior título */
+    margin-bottom: 20px;
   }
 
   .preview p:nth-child(3) {
-    font-size: 1.3rem;
+    font-size: 1.5rem; /* "Juntos" */
   }
 
   .preview p:nth-child(4) {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1.3rem; /* contador */
+    line-height: 1.8; /* mais espaço entre linhas */
   }
 
   .preview p:nth-child(6) {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    padding: 8px;
+    font-size: 1.4rem; /* mensagem */
+    line-height: 1.8;
+    padding: 10px;
+  }
+
+  .preview .image-container {
+    width: 300px; /* aumenta proporção da imagem */
+    height: 400px;
+  }
+
+  .preview iframe {
+    width: 100%;
+    height: 240px;
   }
 }
