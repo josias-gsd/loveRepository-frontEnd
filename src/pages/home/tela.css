@@ -1,3 +1,4 @@
+/* Container da tela: fundo estrelado */
 .tela-container {
   min-height: 100vh;
   width: 100%;
@@ -32,11 +33,22 @@
     );
   background-repeat: repeat;
   background-size: 500px 500px;
-  animation: starsMove 60s linear infinite; /* estrelas se movem lentamente */
-
+  animation: starsMove 60s linear infinite;
   padding: 20px;
 }
 
+/* Animação das estrelas */
+@keyframes starsMove {
+  0% {
+    background-position: 0 0, 25px 25px, 50px 50px, 75px 75px, 100px 100px;
+  }
+  100% {
+    background-position: 500px 500px, 525px 525px, 550px 550px, 575px 575px,
+      600px 600px;
+  }
+}
+
+/* Mensagem de erro */
 .loading-error {
   color: #fff;
   text-align: center;
@@ -46,12 +58,90 @@
   margin: 20px;
 }
 
-/* Sobrescrever alguns estilos do preview para melhor adaptação */
+/* Preview como card */
 .tela-container .preview {
   margin: 0;
   height: auto;
   min-height: 600px;
   max-height: 90vh;
+  width: 100%;
+  max-width: 500px;
+  background: rgba(20, 20, 30, 0.85); /* card levemente transparente */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  color: #fff;
+  overflow-y: auto;
+}
+
+/* Scroll customizado do card */
+.tela-container .preview::-webkit-scrollbar {
+  width: 8px;
+}
+.tela-container .preview::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+.tela-container .preview::-webkit-scrollbar-thumb {
+  background: #ff69b4;
+  border-radius: 4px;
+}
+
+/* Imagem no card */
+.tela-container .preview .image-container {
+  width: 340px;
+  height: 450px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tela-container .preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+/* Mensagens dentro do card */
+.tela-container .preview p {
+  width: 90%;
+  word-wrap: break-word;
+  margin: 5px 0;
+}
+
+/* Títulos e mensagens */
+.tela-container .preview p:nth-child(3) {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.tela-container .preview p:nth-child(4),
+.tela-container .preview p:nth-child(6) {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.05); /* leve transparência */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Linha divisória */
+.tela-container .preview p:nth-child(5) {
+  margin: 15px 0;
+  border-bottom: 2px solid #8d717f;
+  width: 50%;
+  padding-bottom: 5px;
 }
 
 /* Responsividade */
@@ -69,11 +159,20 @@
   .tela-container .preview iframe {
     height: 250px;
   }
+
+  .tela-container .preview p:nth-child(3) {
+    font-size: 1.3rem;
+  }
+  .tela-container .preview p:nth-child(4),
+  .tela-container .preview p:nth-child(6) {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 480px) {
   .tela-container .preview {
     padding: 10px;
+    min-height: 450px;
   }
 
   .tela-container .preview .image-container {
@@ -86,6 +185,6 @@
 
   .tela-container .preview p {
     width: 95%;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }

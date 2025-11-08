@@ -16,17 +16,6 @@
   margin-left: 3rem;
 }
 
-/* Animação leve de movimento (como se o espaço se mexesse) */
-@keyframes starsMove {
-  from {
-    background-position: 0 0, 100px 200px, 200px 400px, 300px 0, 400px 100px;
-  }
-  to {
-    background-position: 500px 1000px, 600px 1200px, 800px 800px, 1000px 400px,
-      1200px 1000px;
-  }
-}
-
 .preview::-webkit-scrollbar {
   width: 8px;
 }
