@@ -4,12 +4,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    180deg,
-    #000000 0%,
-    #1a002a 60%,
-    rgba(255, 105, 180, 0.06) 100%
-  );
+  background-color: #000; /* fundo preto */
+  background-image: radial-gradient(2px 2px #fff, transparent 2px),
+    radial-gradient(2px 2px #fff, transparent 2px);
+  background-position: 0 0, 25px 25px; /* offset dos pontos */
+  background-size: 50px 50px;
   padding: 20px;
 }
 
