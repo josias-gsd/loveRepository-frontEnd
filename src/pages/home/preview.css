@@ -17,21 +17,7 @@
 }
 
 .preview::-webkit-scrollbar {
-  width: 8px;
-}
-
-.preview::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-}
-
-.preview::-webkit-scrollbar-thumb {
-  background: #ff69b4;
-  border-radius: 4px;
-}
-
-.preview::-webkit-scrollbar-thumb:hover {
-  background: #ff1493;
+  display: none; /* oculta a barra de rolagem */
 }
 
 .preview .image-container {
