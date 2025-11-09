@@ -96,7 +96,7 @@ export default function Tela() {
   }, [entry]);
 
   if (loading)
-    return <div className="loading-error">Carregando pré-visualização...</div>;
+    return <div className="loading-error">Carregando a Surpresa❤...</div>;
   if (error)
     return <div className="loading-error">Erro ao carregar dados.</div>;
   if (!entry)
