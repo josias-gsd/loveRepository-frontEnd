@@ -181,12 +181,17 @@
     margin-bottom: 20px;
   }
 
+  .preview p:nth-child(3) {
+    font-size: 1.5rem; /* "Juntos" */
+  }
+
   .preview p:nth-child(4) {
     font-size: 1.3rem; /* contador */
     line-height: 1.8; /* mais espaço entre linhas */
   }
 
   .preview p:nth-child(6) {
+    font-size: 1.4rem; /* mensagem */
     line-height: 1.8;
     padding: 10px;
   }
