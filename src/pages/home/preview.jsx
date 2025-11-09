@@ -52,8 +52,8 @@ function Preview({ tempoJunto, imagem, mensagem, video }) {
         </div>
       )}
 
-      <p>Juntos</p>
-      <p>
+      <p className="titulo-juntos">Juntos</p>
+      <p className="contador-tempo">
         {tempoJunto.anos} anos, {tempoJunto.meses} meses, {tempoJunto.dias} dias
         <br />
         {tempoJunto.horas} horas, {tempoJunto.minutos} minutos,{" "}
@@ -61,7 +61,7 @@ function Preview({ tempoJunto, imagem, mensagem, video }) {
       </p>
       <div className="linha-divisoria"></div>
 
-      <p>{mensagem}</p>
+      <p className="mensagem">{mensagem}</p>
 
       {video && (
         <div style={{ marginTop: "30px" }}>

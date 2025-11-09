@@ -137,12 +137,6 @@
 
 /* Estilo para o título "Como vai ficar" */
 
-/* Estilo para o "Juntos" */
-.preview p:nth-child(3) {
-  font-size: 1.2rem;
-  color: #ffffff;
-}
-
 /* Estilo para o contador */
 .preview p:nth-child(4) {
   font-size: 1.1rem;
@@ -157,15 +151,16 @@
   margin: 15px 0;
 }
 
-/* Mensagem */
+.preview .titulo-juntos {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+}
+
 .preview .mensagem {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #ffffff; /* Agora é branca */
-  padding: 10px;
-  background: transparent;
-  border-radius: 8px;
-  width: 90%;
+  color: #fff;
 }
 
 @media (max-width: 480px) {
@@ -181,19 +176,18 @@
     margin-bottom: 20px;
   }
 
-  .preview p:nth-child(3) {
-    font-size: 1.5rem; /* "Juntos" */
-  }
-
   .preview p:nth-child(4) {
     font-size: 1.3rem; /* contador */
     line-height: 1.8; /* mais espaço entre linhas */
   }
 
-  .preview p:nth-child(6) {
-    font-size: 1.4rem; /* mensagem */
+  .preview .titulo-juntos {
+    font-size: 1.8rem; /* aumenta no celular */
+  }
+
+  .preview .mensagem {
+    font-size: 1.4rem; /* aumenta um pouco a mensagem */
     line-height: 1.8;
-    padding: 10px;
   }
 
   .preview .image-container {
