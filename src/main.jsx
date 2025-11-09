@@ -11,6 +11,8 @@ createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tela" element={<Tela />} />
+        <Route path="/tela/:id" element={<Tela />} />{" "}
+        {/* registro específico */}
       </Routes>
     </BrowserRouter>
   </StrictMode>

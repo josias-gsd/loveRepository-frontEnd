@@ -113,7 +113,8 @@ function Home() {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
-      navigate("/tela");
+      const novoId = res.data.id;
+      navigate(`/tela/${novoId}`);
     } catch (err) {
       console.error("Erro ao criar:", err);
       alert("Erro ao enviar dados. Verifique o console para mais detalhes.");

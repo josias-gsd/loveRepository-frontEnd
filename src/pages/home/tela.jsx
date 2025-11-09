@@ -12,6 +12,7 @@ function extrairVideoId(url) {
 }
 
 export default function Tela() {
+  const { id } = useParams(); // pega o id da URL
   const [entry, setEntry] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -34,7 +35,8 @@ export default function Tela() {
     const fetchData = async () => {
       const start = performance.now();
       try {
-        const res = await api.get("/ver");
+        const endpoint = id ? `/ver/${id}` : "/ver"; // 🔹 se tiver id, busca um só
+        const res = await api.get(endpoint);
         console.log(
           `⏱️ Tempo total front (GET /ver): ${performance.now() - start} ms`
         );
@@ -57,7 +59,7 @@ export default function Tela() {
     };
 
     fetchData();
-  }, []);
+  }, [id]);
   // 🔹 Rotação automática de imagens
   useEffect(() => {
     if (imagens.length === 0) return;
