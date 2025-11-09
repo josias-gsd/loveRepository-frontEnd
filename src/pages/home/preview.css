@@ -180,10 +180,6 @@
     line-height: 1.8; /* mais espaço entre linhas */
   }
 
-  .preview .titulo-juntos {
-    font-size: 1.8rem; /* aumenta no celular */
-  }
-
   .preview .mensagem {
     font-size: 1.4rem; /* aumenta um pouco a mensagem */
     line-height: 1.8;
