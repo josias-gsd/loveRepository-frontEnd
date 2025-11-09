@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Preview from "./preview.jsx";
 import api from "../../services/api";
 import "./tela.css";
