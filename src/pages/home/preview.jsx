@@ -54,7 +54,7 @@ function Preview({ tempoJunto, imagem, mensagem, video }) {
 
       <p className="titulo-juntos">Juntos</p>
       <p className="contador-tempo">
-        {tempoJunto.anos} anos, {tempoJunto.meses} meses, {tempoJunto.dias} dias
+        {tempoJunto.anos} ano, {tempoJunto.meses} meses, {tempoJunto.dias} dias
         <br />
         {tempoJunto.horas} horas, {tempoJunto.minutos} minutos,{" "}
         {tempoJunto.segundos} segundos <br />❤
