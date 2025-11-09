@@ -79,9 +79,4 @@
   .tela-container .preview iframe {
     height: 200px;
   }
-
-  .tela-container .preview p {
-    width: 95%;
-    font-size: 0.9rem;
-  }
 }
