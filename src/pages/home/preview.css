@@ -138,7 +138,7 @@
 /* Estilo para o título "Como vai ficar" */
 
 /* Estilo para o contador */
-.preview p:nth-child(4) {
+.preview .contador-tempo {
   font-size: 1.1rem;
   line-height: 1.5;
   color: #fff;
@@ -153,7 +153,6 @@
 
 .preview .titulo-juntos {
   font-size: 1.4rem;
-  font-weight: bold;
   color: #fff;
 }
 
@@ -176,7 +175,7 @@
     margin-bottom: 20px;
   }
 
-  .preview p:nth-child(4) {
+  .preview .contador-tempo {
     font-size: 1.3rem; /* contador */
     line-height: 1.8; /* mais espaço entre linhas */
   }
