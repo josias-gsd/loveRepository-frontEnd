@@ -34,33 +34,23 @@ export default function Tela() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const start = performance.now();
       try {
         const endpoint = id ? `/ver/${id}` : "/ver"; // 🔹 se tiver id, busca um só
         const res = await api.get(endpoint);
-        console.log(
-          `⏱️ Tempo total front (GET /ver): ${performance.now() - start} ms`
-        );
-        if (res.data && res.data.length > 0) {
-          // procura o primeiro registro (mais recente) com imagens
-          const ultimoComFotos = res.data.find(
-            (item) => Array.isArray(item.photos) && item.photos.length > 0
-          );
-          setEntry(ultimoComFotos || res.data[0]);
-        } else {
-          setEntry(null);
-        }
 
-        setLoading(false);
+        const data = Array.isArray(res.data) ? res.data[0] : res.data;
+        setEntry(data);
       } catch (err) {
         console.error("Erro ao carregar:", err);
         setError(true);
+      } finally {
         setLoading(false);
       }
     };
 
     fetchData();
   }, [id]);
+
   // 🔹 Rotação automática de imagens
   useEffect(() => {
     if (imagens.length === 0) return;
