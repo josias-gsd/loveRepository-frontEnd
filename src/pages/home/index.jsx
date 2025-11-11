@@ -182,6 +182,7 @@ function Home() {
           video={videoId}
         />
       </div>
+      <span>como vai ficar👇</span>
     </html>
   );
 }
