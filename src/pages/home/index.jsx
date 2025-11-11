@@ -177,6 +177,7 @@ function Home() {
       </form>
 
       <Preview
+        {...(<p>como Vai ficar👇</p>)}
         tempoJunto={tempoJunto}
         imagem={selectImg}
         mensagem={mensagem}
