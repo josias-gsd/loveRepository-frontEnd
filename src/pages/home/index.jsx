@@ -174,7 +174,7 @@ function Home() {
             Criar nosso Site
           </button>
         </form>
-
+        <span>como vai ficar👇</span>
         <Preview
           tempoJunto={tempoJunto}
           imagem={selectImg}
@@ -182,7 +182,6 @@ function Home() {
           video={videoId}
         />
       </div>
-      <span>como vai ficar👇</span>
     </html>
   );
 }
