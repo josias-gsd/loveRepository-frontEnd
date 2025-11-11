@@ -127,61 +127,60 @@ function Home() {
   const videoId = videoIdMatch ? videoIdMatch[1] : null;
 
   return (
-    <html lang="en" translate="no">
-      <div className="home-container">
-        <form className="form-section">
-          <h1>Amo Você</h1>
+    <div className="home-container" translate="no">
+      <form className="form-section">
+        <h1>LoveYuu</h1>
 
-          <p>Nome do casal:</p>
-          <input type="text" ref={inputNome} />
+        <p>Nome do casal:</p>
+        <input type="text" ref={inputNome} />
 
-          <p>Início do relacionamento:</p>
-          <input
-            type="date"
-            ref={inputData}
-            value={dataInicio}
-            onChange={mudancaData}
-          />
-          <input
-            type="time"
-            ref={inputHora}
-            value={horaInicio}
-            onChange={mudancaHora}
-          />
-
-          <p>Mensagem:</p>
-          <textarea
-            ref={inputTexto}
-            onChange={(e) => setMensagem(e.target.value)}
-          ></textarea>
-
-          <input
-            type="file"
-            multiple
-            accept="image/*"
-            onChange={mudancaImagens}
-          />
-
-          <p>Música Youtube: (Opcional)</p>
-          <input
-            type="text"
-            ref={inputLink}
-            value={urlVideo}
-            onChange={(e) => setInputVideo(e.target.value)}
-          />
-
-          <button type="button" onClick={criar}>
-            Criar nosso Site
-          </button>
-        </form>
-        <Preview
-          tempoJunto={tempoJunto}
-          imagem={selectImg}
-          mensagem={mensagem}
-          video={videoId}
+        <p>Início do relacionamento:</p>
+        <input
+          type="date"
+          ref={inputData}
+          value={dataInicio}
+          onChange={mudancaData}
         />
-      </div>
-    </html>
+        <input
+          type="time"
+          ref={inputHora}
+          value={horaInicio}
+          onChange={mudancaHora}
+        />
+
+        <p>Mensagem:</p>
+        <textarea
+          ref={inputTexto}
+          onChange={(e) => setMensagem(e.target.value)}
+        ></textarea>
+
+        <input
+          type="file"
+          multiple
+          accept="image/*"
+          onChange={mudancaImagens}
+        />
+
+        <p>Música Youtube: (Opcional)</p>
+        <input
+          type="text"
+          ref={inputLink}
+          value={urlVideo}
+          onChange={(e) => setInputVideo(e.target.value)}
+        />
+
+        <button type="button" onClick={criar}>
+          Criar nosso Site
+        </button>
+      </form>
+      <span>Como vai Ficar👇</span>
+      <Preview
+        tempoJunto={tempoJunto}
+        imagem={selectImg}
+        mensagem={mensagem}
+        video={videoId}
+      />
+    </div>
   );
 }
 
