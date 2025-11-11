@@ -10,7 +10,9 @@ createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/tela" element={<Tela />} />
+        {
+          //<Route path="/tela" element={<Tela />} />
+        }
         <Route path="/tela/:id" element={<Tela />} />{" "}
         {/* registro específico */}
       </Routes>

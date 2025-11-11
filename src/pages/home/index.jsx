@@ -129,9 +129,7 @@ function Home() {
   return (
     <div className="home-container">
       <form className="form-section">
-        <h1>
-          <img src={ReactIcon} alt="" /> LoveYuu <img src={ReactIcon} alt="" />
-        </h1>
+        <h1>LoveYuu</h1>
 
         <p>Nome do casal:</p>
         <input type="text" ref={inputNome} />
@@ -177,7 +175,6 @@ function Home() {
       </form>
 
       <Preview
-        {...(<p>como Vai ficar👇</p>)}
         tempoJunto={tempoJunto}
         imagem={selectImg}
         mensagem={mensagem}
