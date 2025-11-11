@@ -130,7 +130,7 @@ function Home() {
     <html lang="en" translate="no">
       <div className="home-container">
         <form className="form-section">
-          <h1>LoveYuu</h1>
+          <h1>Amo Você</h1>
 
           <p>Nome do casal:</p>
           <input type="text" ref={inputNome} />
