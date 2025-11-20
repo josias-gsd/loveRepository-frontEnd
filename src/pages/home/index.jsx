@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../../services/api";
-import ReactIcon from "../../assets/react.svg"; // Renomeei pra evitar conflito com React
+import EmailInput from "./emailInput.jsx";
 import Preview from "./preview.jsx";
 import "./style.css";
 
@@ -16,6 +16,7 @@ function Home() {
   const [imagemActual, setimagemActual] = useState(0);
   const [imagem, setImagem] = useState("");
   const [urlVideo, setUrlVideo] = useState("");
+  const [showEmailBox, setShowEmailBox] = useState(false);
   const [tempoJunto, setTempo] = useState({
     anos: 0,
     meses: 0,
@@ -169,9 +170,21 @@ function Home() {
           onChange={(e) => setInputVideo(e.target.value)}
         />
 
-        <button type="button" onClick={criar}>
+        <button type="button" onClick={() => setShowEmailBox(true)}>
           Criar nosso Site
         </button>
+
+        {showEmailBox && (
+          <>
+            <div
+              className="email-modal-overlay"
+              onClick={() => setShowEmailBox(false)}
+            ></div>
+            <div className="email-modal-content">
+              <EmailInput onClose={() => setShowEmailBox(false)} />
+            </div>
+          </>
+        )}
       </form>
       <span>Como vai Ficar👇</span>
       <Preview
